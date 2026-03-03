@@ -88,6 +88,7 @@ const generatedSidebar: Record<string, unknown> = structure.reduce((acc, section
 
 export const sidebar: ThemeConfig['sidebar'] = generatedSidebar as unknown as ThemeConfig['sidebar'];
 export default defineConfig({
+  base: '/vitepress/',
   title: 'My Awesome Project',
   description: 'A VitePress Site',
   themeConfig: {
