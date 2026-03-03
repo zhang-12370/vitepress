@@ -3,6 +3,7 @@ import type { Config as ThemeConfig } from '@vue/theme'
 import { headerPlugin } from './headerMdPlugin'
 import {
   groupIconMdPlugin
+// @ts-ignore
 } from 'vitepress-plugin-group-icons'
 
 // https://vitepress.dev/reference/site-config
