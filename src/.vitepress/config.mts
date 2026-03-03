@@ -2,8 +2,7 @@ import { defineConfig } from 'vitepress'
 import type { Config as ThemeConfig } from '@vue/theme'
 import { headerPlugin } from './headerMdPlugin'
 import {
-  groupIconMdPlugin,
-  groupIconVitePlugin
+  groupIconMdPlugin
 } from 'vitepress-plugin-group-icons'
 
 // https://vitepress.dev/reference/site-config
@@ -88,9 +87,11 @@ const generatedSidebar: Record<string, unknown> = structure.reduce((acc, section
 
 export const sidebar: ThemeConfig['sidebar'] = generatedSidebar as unknown as ThemeConfig['sidebar'];
 export default defineConfig({
+  base: '/vitepress/',
   title: 'My Awesome Project',
   description: 'A VitePress Site',
   themeConfig: {
+
     nav,
     sidebar,
     socialLinks: [
