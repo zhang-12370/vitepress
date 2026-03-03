@@ -39,7 +39,16 @@ const structure: Section[] = [
       { text: 'day02', file: 'day02' }
     ]
   },
-  {
+    {
+        base: 'back/docker',
+        groupText: 'Docker',
+        pages: [
+            { text: 'Docker', file: 'index' },
+            { text: 'day01', file: 'day01' },
+            { text: 'day02', file: 'day02' }
+          ]
+    },
+    {
     base: 'back/java',
     groupText: 'Java',
     pages: [
