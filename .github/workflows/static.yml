@@ -32,7 +32,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Pages
+        id: pages
         uses: actions/configure-pages@v5
+      - name: Fix asset base paths for GitHub Pages subpath
+        run: |
+          BASE_PATH="${{ steps.pages.outputs.base_path }}"
+          if [ -n "$BASE_PATH" ] && [ "$BASE_PATH" != "/" ]; then
+            find . -name "*.html" ! -path "./.git/*" | while read file; do
+              sed -i \
+                -e "s|href=\"/assets/|href=\"${BASE_PATH}/assets/|g" \
+                -e "s|src=\"/assets/|src=\"${BASE_PATH}/assets/|g" \
+                -e "s|href=\"/vp-icons.css\"|href=\"${BASE_PATH}/vp-icons.css\"|g" \
+                -e "s|\\\\\"base\\\\\":\\\\\"/\\\\\"|\\\\\"base\\\\\":\\\\\"${BASE_PATH}/\\\\\"|g" \
+                "$file"
+            done
+          fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
