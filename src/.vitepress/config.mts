@@ -24,9 +24,9 @@ const groupMeta: Record<string, { text: string; activeMatch: string }> = {
 const structure: Section[] = [
     {
       base: 'other/git',
-        groupText: '其他',
+        groupText: 'Git',
         pages: [
-            {text: 'Git', file: 'index'},
+            {text: '多SSH配置', file: 'index'},
         ]
     },
     {
