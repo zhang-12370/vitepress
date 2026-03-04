@@ -43,8 +43,8 @@ const structure: Section[] = [
         base: 'back/docker',
         groupText: 'Docker',
         pages: [
-            {text: 'Docker', file: 'index'},
-            {text: 'day01', file: 'day01'},
+            {text: 'Home', file: 'index'},
+            {text: 'Linux', file: 'linux'},
             {text: 'day02', file: 'day02'}
         ]
     },
