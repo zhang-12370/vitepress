@@ -17,10 +17,18 @@ type Section = {
 const groupMeta: Record<string, { text: string; activeMatch: string }> = {
     web: {text: '前端', activeMatch: '^/web/'},
     back: {text: '后端', activeMatch: '^/back/'},
-    database: {text: '数据库', activeMatch: '^/database/'}
+    database: {text: '数据库', activeMatch: '^/database/'},
+    other: {text: '其他', activeMatch: '^/other/'},
 };
 
 const structure: Section[] = [
+    {
+      base: 'other/git',
+        groupText: '其他',
+        pages: [
+            {text: 'Git', file: 'index'},
+        ]
+    },
     {
         base: 'web/JavaScript',
         groupText: 'JavaScript',
