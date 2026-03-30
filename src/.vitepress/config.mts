@@ -15,7 +15,7 @@ type Section = {
 };
 
 const groupMeta: Record<string, { text: string; activeMatch: string }> = {
-    web: {text: '前端', activeMatch: '^/web/'},
+    web: {text: '前端', activeMatch: '^/web|App/'},
     back: {text: '后端', activeMatch: '^/back/'},
     database: {text: '数据库', activeMatch: '^/database/'},
     other: {text: '其他', activeMatch: '^/other/'},
@@ -36,6 +36,14 @@ const structure: Section[] = [
             {text: 'JavaScript', file: 'index'},
             {text: 'day01', file: 'day01'},
             {text: 'day02', file: 'day02'}
+        ]
+    },
+    {
+        base: 'web/App',
+        groupText: 'Hbuilderx',
+        pages: [
+            {text: '创建keystore证书', file: 'index'},
+            {text: 'Hbuilderx', file: 'devDcloud'},
         ]
     },
     {
