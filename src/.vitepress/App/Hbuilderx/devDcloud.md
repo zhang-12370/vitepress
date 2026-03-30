@@ -4,9 +4,9 @@
 
 登录 DCloud 开发者中心后，先创建应用或选择已有应用。
 
-![创建应用入口](image-1.png)
-![应用基础信息](image-2.png)
-![应用配置页面](image-3.png)
+![创建应用入口](./images/image-1.png)
+![应用基础信息](./images/image-2.png)
+![应用配置页面](./images/image-3.png)
 
 ### 2. 选择证书方案
 
@@ -17,12 +17,12 @@
 
 使用云端证书：
 
-![云端证书配置](image-5.png)
+![云端证书配置](./images/image-5.png)
 
 使用本地 `keystore` 证书时，选择本地文件并填写密码：
 
-![本地证书选择](image-4.png)
-![本地证书填写完成](image-6.png)
+![本地证书选择](./images/image-4.png)
+![本地证书填写完成](./images/image-6.png)
 
 ## 二、HBuilderX 云打包配置
 
@@ -30,7 +30,7 @@
 
 在 HBuilderX 中打开项目后，点击工具栏的云打包。
 
-![HBuilderX 云打包入口](image-7.png)
+![HBuilderX 云打包入口](./images/image-7.png)
 
 ### 2. 填写自有证书信息
 
@@ -43,7 +43,7 @@
 | Store Password | 密钥库密码 |
 | Key Password | 密钥密码（通常与密钥库密码一致） |
 
-![自有证书配置示例](image-9.png)
+![自有证书配置示例](./images/image-9.png)
 
 ### 3. 命令行快速核对证书信息
 
